@@ -4,7 +4,24 @@
 	padding: 0;
 }
 
+:root {
+	--theme-text-color: #ffffff;
+	--theme-background: #000000;
+}
+
 body {
-	background-color: black;
-	color: white;
+	background-color: var(--theme-background);
+	color: var(--theme-text-color);
+	font-size: 14px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.page-leave {
+	animation: page-leave 200ms linear forwards;
+}
+
+@keyframes page-leave {
+	to {
+		visibility: hidden;
+	}
 }
