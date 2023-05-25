@@ -1,0 +1,40 @@
+$animationDuration: 200ms;
+
+.main {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.pageEnter {
+	animation: page-enter $animationDuration linear forwards;
+}
+
+.pageLeave {
+	animation: page-leave $animationDuration linear;
+}
+
+@keyframes page-enter {
+	from {
+		opacity: 0;
+		visibility: hidden;
+	}	
+	to {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes page-leave {
+	from {
+		opacity: 1;
+		visibility: visible;
+	}
+	to {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+:export {
+	animationDuration: $animationDuration;
+}

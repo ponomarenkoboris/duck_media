@@ -15,13 +15,3 @@ body {
 	font-size: 14px;
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
-
-.page-leave {
-	animation: page-leave 200ms linear forwards;
-}
-
-@keyframes page-leave {
-	to {
-		visibility: hidden;
-	}
-}

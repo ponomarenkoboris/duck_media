@@ -1,18 +1,18 @@
 .header {
-	position: relative;
 	height: 45px;
 	margin: 0 40px;
+	display: flex;
+	align-items: end;
+	justify-content: flex-end;
+	transform: translateY(-45px);
+	animation: header-drop 300ms 200ms forwards ease-out;
 
-	&__container {
-		width: 100%;
-		display: flex;
-		align-items: end;
-		justify-content: space-between;
-		height: 100%;
-		top: -100%;
-		position: absolute;
-		animation: header_drop 400ms 1s forwards linear;
-	
+	&__menuButton {
+		display: none;
+		
+	}
+
+	&__navigation {
 		.navigation__list {
 			list-style: none;
 			
@@ -38,13 +38,100 @@
 			}
 		}
 	}
+	
 }
 
-@keyframes header_drop {
+@media (max-width: 800px) {
+	.header {
+		transform: none;
+		animation: none;
+		position: relative;
+		align-items: center;
+		margin: 25px 15px 0;
+		height: auto;
+
+		&__menuButton {
+			display: block;
+			background: inherit;
+			border: none;
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+
+			.bar {
+				width: 100%;		
+				height: 1px;
+				margin: 5px 0;
+				background-color: #fff;
+			}
+		}
+
+		&__navigation {
+			width: 100%;
+			position: absolute;
+			height: 258px;
+			top: 45px;
+			opacity: 0;
+			visibility: hidden;
+			background-color: var(--theme-text-color);
+			
+
+			.navigation__list {
+				padding: 20px 0;
+				width: 100%;
+				
+				.navigation__item {
+					display: block;
+					text-align: center;
+					padding: 10px;
+
+					.navigation__link {
+						color: var(--theme-background);
+					}
+				}
+			}
+		}
+
+		&__navigation.showMenu {
+			animation: header-menu-show 500ms forwards ease-out;
+		}
+
+		&__navigation.hideMenu {
+			animation: header-menu-hide 500ms forwards ease-out;
+		}
+
+	}
+}
+
+@keyframes header-drop {
 	from {
-		top: -45px;
+		transform: translateY(-45px);
 	}
 	to {
-		top: 0;
+		transform: translateY(0);
+	}
+}
+
+@keyframes header-menu-show {
+	from {
+		visibility: hidden;
+		opacity: 0;
+	}
+	to {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@keyframes header-menu-hide {
+	from {
+		height: 258px;
+		visibility: visible;
+		opacity: 1;
+	}
+	to {
+		height: 0;
+		visibility: hidden;
+		opacity: 0;
 	}
 }
