@@ -2,13 +2,15 @@ import { MouseEvent, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { routes, navBlurEvent } from './header.utils';
 import Link from 'next/link';
+import Image from 'next/image';
+import duckLogo from 'public/logo/logo_white.png';
 import styles from './Header.module.scss';
 
 interface HeaderProps {
-	onListClick: (e: MouseEvent<HTMLUListElement>) => void
+	onPageLeave: (e: MouseEvent<HTMLUListElement | HTMLAnchorElement>) => void
 }
 
-export default function Header({ onListClick }: HeaderProps) {
+export default function Header({ onPageLeave }: HeaderProps) {
 	const { pathname } = useRouter()
 	const navRef = useRef<HTMLElement>(null)
 
@@ -35,6 +37,17 @@ export default function Header({ onListClick }: HeaderProps) {
 
 	return (
 		<header className={styles.header}>
+			<div className={styles.logo__wrapper}>
+				{pathname !== '/' && (
+					<Link href={'/'} onClick={onPageLeave}>
+						<Image
+							height={45}
+							src={duckLogo}
+							alt='Duck'
+						/>
+					</Link>
+				)}
+			</div>
 			<button 
 				className={styles.header__menuButton}
 				onClick={onMenuButtonClick}
@@ -44,7 +57,7 @@ export default function Header({ onListClick }: HeaderProps) {
 				<div className={styles.bar}></div>
 			</button>
 			<nav className={styles.header__navigation} ref={navRef}>
-				<ul className={styles.navigation__list} onClickCapture={onListClick}>
+				<ul className={styles.navigation__list} onClickCapture={onPageLeave}>
 					{routes.map(({ id, path, name }) => (
 						<li 
 							key={id}

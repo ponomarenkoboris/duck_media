@@ -14,7 +14,7 @@ export default function Layout({ children }: PropsWithChildren) {
 	const wrapperRef = useRef<HTMLDivElement>(null)
 	const { pathname, push } = useRouter()
 
-	const onListClick = (isInAction = false) => (event: MouseEvent<HTMLUListElement>) => {
+	const onPageLeave = (isInAction = false) => (event: MouseEvent<HTMLUListElement | HTMLAnchorElement>) => {
 		event.preventDefault()
 		const anchor = (event.target as HTMLElement).closest('a');
 
@@ -34,7 +34,7 @@ export default function Layout({ children }: PropsWithChildren) {
 			ref={wrapperRef}
 			className={`${poppins.className} ${styles.appWrapper} ${styles.pageEnter}`} 
 		>
-			<Header onListClick={onListClick()} />
+			<Header onPageLeave={onPageLeave()} />
 			<main className={styles.main}>
 				{children}
 			</main>
