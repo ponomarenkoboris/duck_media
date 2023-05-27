@@ -32,10 +32,10 @@ export default function Layout({ children }: PropsWithChildren) {
 	return (
 		<div 
 			ref={wrapperRef}
-			className={`${poppins.className} ${styles.main} ${styles.pageEnter}`} 
+			className={`${poppins.className} ${styles.appWrapper} ${styles.pageEnter}`} 
 		>
 			<Header onListClick={onListClick()} />
-			<main>
+			<main className={styles.main}>
 				{children}
 			</main>
 		</div>
