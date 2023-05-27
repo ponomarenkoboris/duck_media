@@ -3,10 +3,6 @@ $animationDuration: 200ms;
 .appWrapper {
 	opacity: 0;
 	visibility: hidden;
-
-	.main {
-		height: calc(100vh - 45px);
-	}
 }
 
 .pageEnter {

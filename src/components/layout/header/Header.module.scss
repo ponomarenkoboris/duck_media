@@ -1,8 +1,8 @@
 .header {
-	height: 45px;
+	height: 50px;
 	margin: 0 40px;
 	display: flex;
-	align-items: end;
+	align-items: center;
 	justify-content: space-between;
 	transform: translateY(-45px);
 	animation: header-drop 300ms 200ms forwards ease-out;
@@ -52,9 +52,7 @@
 		transform: none;
 		animation: none;
 		position: relative;
-		align-items: center;
 		margin: 15px 15px 0;
-		height: auto;
 
 		&__menuButton {
 			display: block;
