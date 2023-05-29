@@ -1,0 +1,30 @@
+.contacts {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 1170px;
+	
+	&__info {
+		width: 41%;
+		padding: 0 15px;
+
+		& > * {
+			margin-bottom: 10px;
+		}
+
+		.info__title {
+			font-size: 3.5rem;
+			font-weight: 300;
+			line-height: 1.1;
+		}
+
+		.info__description {
+			font-family: "HK Grotesk", "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 1.45em;
+			line-height: 1.6;
+			color: #B6B6B6;
+		}
+	}
+
+	
+}

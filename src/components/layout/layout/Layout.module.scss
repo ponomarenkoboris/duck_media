@@ -5,6 +5,10 @@ $animationDuration: 200ms;
 	visibility: hidden;
 }
 
+.backgroundGradient {
+	background: var(--theme-gradient-background) !important;
+}
+
 .pageEnter {
 	animation: page-enter $animationDuration linear forwards;
 }

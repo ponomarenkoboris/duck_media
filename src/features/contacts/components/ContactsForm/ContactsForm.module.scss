@@ -1,0 +1,32 @@
+.contacts__form {
+	font-size: 14px;
+	line-height: 1.42857;
+	width: 42%;
+	color: #333333;
+	
+	.form__bottom {
+		color: var(--theme-text-color);
+	
+		span {
+			font-size: 14px;
+			line-height: 1.42857;
+		}
+	
+		.form__submit {
+			border: none;
+			background-color: inherit;
+			text-transform: uppercase;
+			font-size: 1em;
+			font-weight: 600;
+			letter-spacing: 1px;
+			cursor: pointer;
+			color: inherit;
+			transition: opacity 300ms linear;
+			margin-right: 30px;
+	
+			&:hover {
+				opacity: .5;
+			}
+		}
+	}
+}
