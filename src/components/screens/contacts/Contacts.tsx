@@ -5,7 +5,7 @@ import styles from './Contacts.module.scss'
 export default function Contacts() {
 	return (
 		<Layout>
-			<div className={styles.contacts}>
+			<div className={styles.contacts} id='contacts'>
 				<div className={styles.contacts__info}>
 					<h1 className={styles.info__title}>Contact</h1>
 					<p className={styles.info__description}>

@@ -1,4 +1,4 @@
-import Layout from '@/components/layout/layout/Layout'
+import Layout from '@components/layout/layout/Layout'
 import styles from './Portfolio.module.scss'
 
 export default function Portfolio() {

@@ -1,4 +1,4 @@
-import Layout from '@/components/layout/layout/Layout'
+import Layout from '@components/layout/layout/Layout'
 import styles from './Clients.module.scss'
 
 export default function Clients() {
