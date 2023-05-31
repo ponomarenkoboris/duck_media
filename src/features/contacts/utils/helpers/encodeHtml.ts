@@ -1,0 +1,1 @@
+export const encodeHtml = (...args: string[]): string[] => args.map(value => value.replaceAll('>', '&gt;').replaceAll('<', '&lt;'))

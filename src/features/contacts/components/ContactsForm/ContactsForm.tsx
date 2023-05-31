@@ -1,6 +1,6 @@
 import { useState, FormEvent } from "react";
 import { TextField } from "../TextField/TextField";
-import { validateEmail, validateText } from "@features/contacts/utils";
+import { validateEmail, validateText, encodeHtml } from "@features/contacts/utils";
 import styles from "./ContactsForm.module.scss";
 
 type FormControls = { name: HTMLInputElement, email: HTMLInputElement, about: HTMLTextAreaElement } & HTMLFormControlsCollection
@@ -11,12 +11,16 @@ export const ContactsForm = () => {
 
 	const onFormSubmit = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
-		const { name, email, about } = event.currentTarget.elements as FormControls
+		const { 
+			name: { value: nameVal }, 
+			email: { value: emailVal }, 
+			about: { value: aboutVal } 
+		} = event.currentTarget.elements as FormControls
 
 		const newTips = {
-			nameTip: validateText(name.value),
-			emailTip: validateEmail(email.value),
-			aboutTip: validateText(about.value)
+			nameTip: validateText(nameVal),
+			emailTip: validateEmail(emailVal),
+			aboutTip: validateText(aboutVal)
 		}
 
 		if (newTips.nameTip !== null || newTips.emailTip !== null || newTips.aboutTip !== null) {
@@ -26,6 +30,7 @@ export const ContactsForm = () => {
 			return 
 		}
 
+		const [ name, email, about ] = encodeHtml(nameVal, emailVal, aboutVal);
 		console.log('field is valid')
 	}
 
