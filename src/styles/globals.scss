@@ -26,6 +26,10 @@ body:has(#contacts) {
 	background: var(--theme-gradient-background);
 }
 
+body:has(#work-showreal) {
+	overflow: hidden;
+}
+
 #__next {
 	height: 100%;
 }

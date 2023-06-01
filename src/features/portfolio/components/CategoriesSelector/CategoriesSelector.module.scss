@@ -1,4 +1,5 @@
 .categories {
+	margin-top: 150px;
 	margin-bottom: 70px;
 
 	&__controller {
@@ -22,7 +23,7 @@
 	}
 
 	&__categoriesListContainer {
-		position: absolute;
+		position: fixed;
 		background-color: rgba($color: #000000, $alpha: .85);
 		top: 0;
 		left: 0;
@@ -31,6 +32,8 @@
 
 		.categoriesList {
 			display: flex;
+			height: 100%;
+			align-items: center;
 			justify-content: space-around;
 
 			.categoriesList__item {
@@ -55,5 +58,20 @@
 			}
 		}
 
+	}
+}
+@media (max-width: 1022px) {
+	.categories {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 594px) {
+	.categories {
+		&__categoriesListContainer {
+			.categoriesList {
+				flex-direction: column;
+			}
+		}
 	}
 }
