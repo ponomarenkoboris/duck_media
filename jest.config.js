@@ -2,7 +2,10 @@
 module.exports = {
 	preset: 'ts-jest',
 	testEnvironment: 'jsdom',
+	setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
+	coverageDirectory: "coverage",
 	moduleNameMapper: {
+		"\\.(jpg|jpeg|png|svg)$": "<rootDir>/__mock__/fileMock.ts",
 		"^.+\\.s?css$": "identity-obj-proxy",
 		"^@public(.*)$": "<rootDir>/public/$1",
 		"^@features(.*)$": "<rootDir>/src/features/$1",

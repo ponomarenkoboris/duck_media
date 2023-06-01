@@ -1,37 +1,45 @@
-.clients {
-	width: 1170px;
-	margin: 150px auto 70px;
+.clients__container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-	.clients__info {
-		width: 100%;
-		margin-bottom: 80px;
-
-		.info__title {
-			margin-bottom: 10px;
-			font-weight: 600;
-			font-size: 18px;
+	.clients {
+		width: 1170px;
+		margin-top: 100px;
+	
+		.clients__info {
+			width: 100%;
+			margin-bottom: 80px;
+	
+			.info__title {
+				margin-bottom: 10px;
+				font-weight: 600;
+				font-size: 18px;
+			}
+	
+			.info__text {
+				font-size: 1.45em;
+				line-height: 1.6;
+				font-family: "HK Grotesk", "Helvetica Neue", Helvetica, sans-serif;
+				color: var(--theme-dark-grey);
+			}
 		}
-
-		.info__text {
-			font-size: 1.45em;
-			line-height: 1.6;
-			font-family: "HK Grotesk", "Helvetica Neue", Helvetica, sans-serif;
-			color: var(--theme-dark-grey);
-		}
-	}
-
-	.client__list {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		list-style: none;
-		width: 100%;
-		justify-content: space-between;
-
-		.list__column {
-			.list__item {
-				margin: 10px 0;
-				.client__name {
-					font-size: 1.65em;
+	
+		.client__list {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			list-style: none;
+			width: 100%;
+			justify-content: space-between;
+	
+			.list__column {
+				.list__item {
+					margin: 10px 0;
+					.client__name {
+						font-size: 1.65em;
+					}
 				}
 			}
 		}
@@ -39,26 +47,30 @@
 }
 
 @media (max-width: 1235px) {
-	.clients {
+	.clients__container > .clients {
+		margin-top: 50px;
 		width: 970px;
 	}
 }
 
 @media (max-width: 1028px) {
-	.clients {
-		width: 100%;
-		padding: 30px;
+	.clients__container {
 
-		.client__list {
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: repeat(2, 1fr);
-			row-gap: 20px;
+		.clients {
+			width: 100%;
+			padding: 30px;
+	
+			.client__list {
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				row-gap: 20px;
+			}
 		}
 	}
 }
 
 @media (max-width: 533px) {
-	.clients {
+	.clients__container > .clients {
 		.client__list {
 			grid-template-columns: 1fr;
 			grid-template-rows: repeat(4, 1fr);

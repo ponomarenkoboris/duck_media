@@ -33,7 +33,7 @@ const works: Work[] = [
 
 export type Category = Omit<Work, 'src'>;
 
-const categories = ((): Category[] => {
+const getCategories = (works: Category[]): Category[] => {
 	const map: { [key: string]: string } = {}
 	const result: Category[] = []
 
@@ -47,9 +47,12 @@ const categories = ((): Category[] => {
 	}
 
 	return result
-})();
+}
+
+const categories = getCategories(works);
 
 export {
 	works,
-	categories
+	categories,
+	getCategories
 }

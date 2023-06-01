@@ -1,4 +1,4 @@
-import { categories, works, type Category, type Work } from './constants/works'
+import { categories, works, type Category, type Work } from './portfolioData'
 
 export {
 	works,

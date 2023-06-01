@@ -3,6 +3,11 @@ $animationDuration: 200ms;
 .appWrapper {
 	opacity: 0;
 	visibility: hidden;
+	height: 100%;
+}
+
+.main {
+	min-height: calc(100% - 50px);
 }
 
 .backgroundGradient {
