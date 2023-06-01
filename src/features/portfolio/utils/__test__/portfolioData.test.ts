@@ -1,6 +1,6 @@
 import { getCategories, works } from "../portfolioData";
 
-describe('Тестирование portfolioData', () => {
+describe('Тестирование features/portfolio/utils/portfolioData', () => {
 	it('Функция getCategories всегда должна возвращать массив с arr[0].category === "Все"', () => {
 		const randomSort = () => Math.random() - 0.5;
 		let categories = getCategories(works);

@@ -1,0 +1,1 @@
+export const encodeUserInput = (...args: string[]): string[] => args.map(value => value.replaceAll('>', '&gt;').replaceAll('<', '&lt;'))

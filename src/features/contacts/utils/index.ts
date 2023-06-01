@@ -1,9 +1,9 @@
 import { validateEmail } from "./validation/validateEmail";
 import { validateText } from "./validation/validateText";
-import { encodeHtml } from "./helpers/encodeHtml";
+import { encodeUserInput } from "./helpers/encodeUserInput";
 
 export {
 	validateEmail,
 	validateText,
-	encodeHtml
+	encodeUserInput
 }

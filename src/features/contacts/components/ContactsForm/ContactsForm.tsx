@@ -1,6 +1,6 @@
 import { useState, FormEvent } from "react";
 import { TextField } from "../TextField/TextField";
-import { validateEmail, validateText, encodeHtml } from "@features/contacts/utils";
+import { validateEmail, validateText, encodeUserInput } from "@features/contacts/utils";
 import styles from "./ContactsForm.module.scss";
 
 type FormControls = { name: HTMLInputElement, email: HTMLInputElement, about: HTMLTextAreaElement } & HTMLFormControlsCollection
@@ -30,7 +30,7 @@ export const ContactsForm = () => {
 			return 
 		}
 
-		const [ name, email, about ] = encodeHtml(nameVal, emailVal, aboutVal);
+		const [ name, email, about ] = encodeUserInput(nameVal, emailVal, aboutVal);
 		console.log('field is valid')
 	}
 
