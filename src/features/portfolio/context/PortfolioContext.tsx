@@ -1,5 +1,5 @@
 import { createContext, useReducer, PropsWithChildren } from "react";
-import { type Work, categories } from "../utils";
+import { type Work, type FindFeaturedWorkMode, categories, findFeaturedWork } from "../utils";
 
 type PortfolioStateType = {
 	activeCategory: string, 
@@ -8,7 +8,8 @@ type PortfolioStateType = {
 
 type PortfolioContextType = PortfolioStateType & { 
 	updateFeaturedWork: (work: Work | null) => void,
-	selectCategory: (category: string) => void
+	selectCategory: (category: string) => void,
+	changeFeaturedWork: (mode: FindFeaturedWorkMode) => void
 }
 
 const initialState = {
@@ -19,7 +20,8 @@ const initialState = {
 export const PortfolioContext = createContext<PortfolioContextType>({ 
 	...initialState, 
 	selectCategory: () => null, 
-	updateFeaturedWork: () => null 
+	updateFeaturedWork: () => null,
+	changeFeaturedWork: () => null
 })
 
 enum PortfolioActionTypes {
@@ -62,5 +64,13 @@ export const PortfolioContextProvider = ({ children }: PropsWithChildren) => {
 		}
 	}
 
-	return <PortfolioContext.Provider value={{ ...store, selectCategory, updateFeaturedWork }}>{children}</PortfolioContext.Provider>
+	const changeFeaturedWork = (mode: FindFeaturedWorkMode) => {
+		if (!store.featuredWork) return
+
+		const newWork = findFeaturedWork(store.featuredWork.id, mode)
+
+		if (newWork) dispatch({ type: PortfolioActionTypes.SET_FEATURED_WORK, payload: newWork })
+	}
+
+	return <PortfolioContext.Provider value={{ ...store, selectCategory, updateFeaturedWork, changeFeaturedWork }}>{children}</PortfolioContext.Provider>
 }

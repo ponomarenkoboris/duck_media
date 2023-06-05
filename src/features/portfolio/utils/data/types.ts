@@ -1,0 +1,1 @@
+export type Work = { id: number, category: string, src: string, name: string };
