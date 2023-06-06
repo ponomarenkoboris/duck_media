@@ -1,4 +1,4 @@
-import { useContext, useCallback, MouseEvent } from 'react';
+import { useContext, MouseEvent } from 'react';
 import { PortfolioContext } from '../../context/PortfolioContext';
 import { works } from '../../utils';
 import { WorkCard } from './WorkCard/WorkCard';

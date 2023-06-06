@@ -80,14 +80,23 @@
 		.showreal__moblieControllers {
 			display: flex;
 			position: absolute;
-			background-color: red;
 			top: 0;
 			left: 0;
+			height: 60px;
 			width: 100%;
-			// TODO styles fro mobile controllers
+
+			.mobile__controller {
+				flex: 1;
+				border: none;
+				outline: none;
+				background-color: inherit;
+
+				&:first-child {
+					transform: rotate(180deg);
+				}
+			}
 		}
 		.showreal__wrapper {
-
 
 			.close__showreal {
 				display: none;

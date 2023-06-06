@@ -2,18 +2,19 @@ import { useContext, MouseEvent } from 'react';
 import Image from 'next/image';
 import { PortfolioContext } from '../../context/PortfolioContext';
 import styles from './FeaturedWork.module.scss';
-// TODO logic for mobile controllers
+
 export const FeaturedWork = () => {
 	const { featuredWork, updateFeaturedWork, changeFeaturedWork } = useContext(PortfolioContext);
 
 	const showrealClickHandler = (event: MouseEvent<HTMLDivElement>) => {
 		const target = event.target as HTMLElement
-		
-		if (target.classList.contains(styles.close__showreal)) {
+		const control = target.closest('[data-controller]') as HTMLDivElement | HTMLButtonElement | null
+
+		if (control?.dataset.controller === 'close') {
 			updateFeaturedWork(null)
-		} else if (target.closest('#prev-controller')) {
+		} else if (control?.dataset.controller === 'prev') {
 			changeFeaturedWork('prev')
-		} else if (target.closest('#next-controller')) {
+		} else if (control?.dataset.controller === 'next') {
 			changeFeaturedWork('next')
 		} else {
 			updateFeaturedWork(null)
@@ -23,7 +24,7 @@ export const FeaturedWork = () => {
 	return featuredWork && (
 		<div id='work-showreal' className={styles.workShowreal} onClick={showrealClickHandler}>
 			<div className={styles.showreal__moblieControllers}>
-				<button className="mobile__controller">
+				<button data-controller="prev" className={styles.mobile__controller}>
 					<Image 
 						src={'/portfolio/featuredWork/arrow.svg'}
 						alt='Previous work'
@@ -31,7 +32,7 @@ export const FeaturedWork = () => {
 						width={7.5}
 					/>
 				</button>
-				<button className="mobile__controller">
+				<button data-controller="next" className={styles.mobile__controller}>
 					<Image 
 						src={'/portfolio/featuredWork/arrow.svg'}
 						alt='Next work'
@@ -39,7 +40,7 @@ export const FeaturedWork = () => {
 						width={7.5}
 					/>
 				</button>
-				<button className="close__showreal">
+				<button data-controller="close" className={styles.mobile__controller}>
 					<Image 
 						className={styles.close__icon}
 						src={'/portfolio/featuredWork/cross.svg'}
@@ -50,7 +51,7 @@ export const FeaturedWork = () => {
 				</button>
 			</div>
 			<div className={styles.showreal__wrapper}>
-				<button className={styles.close__showreal}>
+				<button data-controller="close" className={styles.close__showreal}>
 					<Image 
 						className={styles.close__icon}
 						src={'/portfolio/featuredWork/cross.svg'}
@@ -68,8 +69,8 @@ export const FeaturedWork = () => {
 						height={387}
 					/>
 					<div className={styles.showreal__controllers}>
-						<div id='prev-controller' className={styles.showreal__controller}></div>
-						<div id='next-controller' className={styles.showreal__controller}></div>
+						<div data-controller="prev" className={styles.showreal__controller}></div>
+						<div data-controller="next" className={styles.showreal__controller}></div>
 					</div>
 					<p className={styles.work__name}>{featuredWork.name}</p>
 				</div>

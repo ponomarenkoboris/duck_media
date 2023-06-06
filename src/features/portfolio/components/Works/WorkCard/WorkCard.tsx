@@ -3,7 +3,7 @@ import Image from 'next/image'
 import type { Work } from '../../../utils'
 import styles from './WorkCard.module.scss';
 
-const Card = ({ src, id }: Omit<Work, 'category'>) => {
+const Card = ({ src, id }: Omit<Work, 'category' | 'name'>) => {
 	return (
 		<div className={styles.workCard} data-workid={id}>
 			<Image 
