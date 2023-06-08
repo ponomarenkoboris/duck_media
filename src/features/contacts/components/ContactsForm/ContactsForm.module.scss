@@ -24,7 +24,7 @@
 			transition: opacity 300ms linear;
 			margin-right: 30px;
 	
-			&:hover {
+			&:hover, &:focus {
 				opacity: .5;
 			}
 		}
