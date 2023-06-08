@@ -1,0 +1,48 @@
+.contacts {
+	height: 100%;
+	padding: 100px 20px 0;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 1170px;
+	
+	&__info {
+		width: 41%;
+
+		& > * {
+			margin-bottom: 10px;
+		}
+
+		.info__title {
+			font-size: 3.5rem;
+			font-weight: 300;
+			line-height: 1.1;
+		}
+
+		.info__description {
+			font-family: "HK Grotesk", "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 1.45em;
+			line-height: 1.6;
+			color: var(--theme-dark-grey);
+		}
+	}
+
+	
+}
+@media (max-width: 1216px) {
+	.contacts {
+		width: 992px;
+	} 
+}
+@media (max-width: 992px) {
+	.contacts {
+		display: block;
+		padding: 40px 20px;
+		width: 100%;
+
+		&__info {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+	}
+}

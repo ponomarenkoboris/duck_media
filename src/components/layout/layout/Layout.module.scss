@@ -1,0 +1,49 @@
+$animationDuration: 200ms;
+
+.appWrapper {
+	opacity: 0;
+	visibility: hidden;
+	height: 100%;
+}
+
+.main {
+	min-height: calc(100% - 50px);
+}
+
+.backgroundGradient {
+	background: var(--theme-gradient-background);
+}
+
+.pageEnter {
+	animation: page-enter $animationDuration linear forwards;
+}
+
+.pageLeave {
+	animation: page-leave $animationDuration linear;
+}
+
+@keyframes page-enter {
+	from {
+		opacity: 0;
+		visibility: hidden;
+	}	
+	to {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes page-leave {
+	from {
+		opacity: 1;
+		visibility: visible;
+	}
+	to {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+:export {
+	animationDuration: $animationDuration;
+}

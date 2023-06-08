@@ -1,0 +1,145 @@
+.header {
+	height: 50px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transform: translateY(-45px);
+	animation: header-drop 300ms 200ms forwards ease-out;
+
+	.logo__wrapper {
+		height: 100%;
+		margin-left: 40px;
+	}
+
+	&__menuButton {
+		display: none;
+	}
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		margin-right: 40px;
+
+		.navigation__list {
+			list-style: none;
+			
+			.navigation__item {
+				display: inline-block;
+				margin: 0 10px;
+				opacity: .7;
+				transition: opacity 500ms linear;
+	
+				&:hover {
+					opacity: 1;
+				}
+	
+				.navigation__link {
+					font-size: 1.1em;
+					text-decoration: none;
+					color: var(--theme-text-color);
+				}
+			}
+	
+			.active__item {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.header {
+		transform: none;
+		animation: none;
+		position: relative;
+		// margin: 15px 15px 0;
+		background-color: var(--theme-background);
+
+		&__menuButton {
+			margin-right: 40px;
+			display: block;
+			background: inherit;
+			border: none;
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+
+			.bar {
+				width: 100%;		
+				height: 1px;
+				margin: 5px 0;
+				background-color: #fff;
+			}
+		}
+
+		&__navigation {
+			width: 100%;
+			position: absolute;
+			height: 258px;
+			top: 50px;
+			opacity: 0;
+			visibility: hidden;
+			background-color: var(--theme-text-color);
+			z-index: 1;
+			
+
+			.navigation__list {
+				padding: 20px 0;
+				width: 100%;
+				
+				.navigation__item {
+					display: block;
+					text-align: center;
+					padding: 10px;
+
+					.navigation__link {
+						color: var(--theme-background);
+					}
+				}
+			}
+		}
+
+		&__navigation.showMenu {
+			animation: header-menu-show 500ms forwards ease-out;
+		}
+
+		&__navigation.hideMenu {
+			animation: header-menu-hide 500ms forwards ease-out;
+		}
+
+	}
+}
+
+@keyframes header-drop {
+	from {
+		transform: translateY(-45px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes header-menu-show {
+	from {
+		visibility: hidden;
+		opacity: 0;
+	}
+	to {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@keyframes header-menu-hide {
+	from {
+		height: 258px;
+		visibility: visible;
+		opacity: 1;
+	}
+	to {
+		height: 0;
+		visibility: hidden;
+		opacity: 0;
+	}
+}

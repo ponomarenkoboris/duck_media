@@ -1,0 +1,56 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+:root {
+	--theme-text-color: #ffffff;
+	--theme-dark-grey: #B6B6B6;
+	--theme-background: #000000;
+	--theme-gradient-background: linear-gradient(90deg, rgba(0,0,0,1) 35%, rgba(0,0,0,0.6) 100%);
+}
+
+body {
+	background-color: var(--theme-background);
+	color: var(--theme-text-color);
+	font-size: 14px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body:has(#contacts) {
+	background: var(--theme-gradient-background);
+}
+
+body:has(#work-showreal) {
+	overflow: hidden;
+}
+
+#__next {
+	height: 100%;
+}
+
+button, a, textarea, input {
+	outline: none;
+}
+
+::selection {
+	background: #fff;
+  	color: #000;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background-color: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: var(--theme-text-color);
+}
