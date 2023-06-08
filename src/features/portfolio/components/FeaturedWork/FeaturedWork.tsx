@@ -22,7 +22,7 @@ export const FeaturedWork = () => {
 	}
 
 	return featuredWork && (
-		<div id='work-showreal' className={styles.workShowreal} onClick={showrealClickHandler}>
+		<div id='work-showreal' data-id={featuredWork.id} className={styles.workShowreal} onClick={showrealClickHandler}>
 			<div className={styles.showreal__moblieControllers}>
 				<button data-controller="prev" className={styles.mobile__controller}>
 					<Image 
