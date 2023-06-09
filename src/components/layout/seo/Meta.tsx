@@ -12,6 +12,7 @@ export const Meta = ({ children, title, description }: PropsWithChildren<MetaDat
 				<meta name="desciption" content={description} />
 				<meta name="og:title" content={getTitle(title)} />
 				<meta name="og:desciption" content={description} />
+				<link rel="icon" href="/favicon/favicon-dark.ico" sizes="any" />
 			</Head>
 			{children}
 		</>
