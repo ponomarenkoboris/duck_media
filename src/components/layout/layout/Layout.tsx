@@ -2,6 +2,9 @@ import { useRef, MouseEvent } from "react";
 import { useRouter } from "next/router";
 import { PropsWithChildren } from "react";
 import { Poppins } from "next/font/google";
+import { Meta } from "../seo/Meta";
+import seo from '@data/seo.json'
+import type { SeoConfig } from "@data/types/seo.type";
 import Header from "../header/Header";
 import styles from "./Layout.module.scss";
 
@@ -13,6 +16,7 @@ const poppins = Poppins({
 export default function Layout({ children }: PropsWithChildren) {
 	const wrapperRef = useRef<HTMLDivElement>(null)
 	const { pathname, push } = useRouter()
+	const metadata = (seo as SeoConfig)[pathname];
 
 	const onPageLeave = (isInAction = false) => (event: MouseEvent<HTMLUListElement | HTMLAnchorElement>) => {
 		event.preventDefault()
@@ -30,14 +34,16 @@ export default function Layout({ children }: PropsWithChildren) {
 	}
 
 	return (
-		<div 
-			ref={wrapperRef}
-			className={`${poppins.className} ${styles.appWrapper} ${styles.pageEnter}`} 
-		>
-			<Header onPageLeave={onPageLeave()} />
-			<main className={styles.main}>
-				{children}
-			</main>
-		</div>
+		<Meta title={metadata.title} description={metadata.description} >
+			<div 
+				ref={wrapperRef}
+				className={`${poppins.className} ${styles.appWrapper} ${styles.pageEnter}`} 
+			>
+				<Header onPageLeave={onPageLeave()} />
+				<main className={styles.main}>
+					{children}
+				</main>
+			</div>
+		</Meta>
 	)
 }

@@ -1,6 +1,6 @@
 import { useContext, useMemo, MouseEvent } from 'react';
 import { PortfolioContext } from '../../context/PortfolioContext';
-import { works } from '../../utils';
+import works from '@data/works.json';
 import { WorkCard } from './WorkCard/WorkCard';
 import styles from './Works.module.scss';
 

@@ -1,4 +1,4 @@
-import works from '../../data/works.json';
+import works from '@data/works.json';
 import { findFeaturedWork } from "../../helpers/findFeaturedWork";
 
 describe('Тестирование features/portfolio/utils/helpers/findFeaturedWork', () => {

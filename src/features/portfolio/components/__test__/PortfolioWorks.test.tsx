@@ -1,4 +1,4 @@
-import { works } from '../../utils'
+import works from '@data/works.json';
 import { PortfolioWorks } from "../PortfolioWorks";
 import { render } from '@testing-library/react';
 
