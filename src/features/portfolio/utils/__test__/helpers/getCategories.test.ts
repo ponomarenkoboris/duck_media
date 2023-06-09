@@ -1,4 +1,4 @@
-import works from '../../data/works.json';
+import works from '@data/works.json';
 import { getCategories } from "../../helpers/getCategories";
 
 describe('Тестирование features/portfolio/utils/portfolioData', () => {

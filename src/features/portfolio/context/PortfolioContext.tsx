@@ -1,5 +1,6 @@
 import { createContext, useReducer, PropsWithChildren } from "react";
-import { type Work, type FindFeaturedWorkMode, categories, findFeaturedWork } from "../utils";
+import { type FindFeaturedWorkMode, categories, findFeaturedWork } from "../utils";
+import type { Work } from '@data/types/works.type';
 
 type PortfolioStateType = {
 	activeCategory: string, 

@@ -1,6 +1,6 @@
 import { MouseEvent, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { routes, navBlurEvent } from './header.utils';
+import { routes, navBlurEvent } from './utils';
 import Link from 'next/link';
 import Image from 'next/image';
 import duckLogo from 'public/logo/logo_white.png';

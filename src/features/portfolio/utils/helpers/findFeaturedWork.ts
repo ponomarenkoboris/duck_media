@@ -1,5 +1,5 @@
-import works from '../data/works.json';
-import type { Work } from '../data/types';
+import works from '@data/works.json';
+import type { Work } from '@data/types/works.type';
 
 export type FindFeaturedWorkMode = "next" | "prev"
 

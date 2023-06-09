@@ -1,0 +1,22 @@
+{
+	"/": {
+		"title": "Главная",
+		"description": ""
+	},
+	"/portfolio": {
+		"title": "Портфолио",
+		"description": ""
+	},
+	"/about": {
+		"title": "О нас",
+		"description": ""
+	},
+	"/clients": {
+		"title": "Клиенты",
+		"description": ""
+	},
+	"/contacts": {
+		"title": "Контакты",
+		"description": ""
+	}
+}
