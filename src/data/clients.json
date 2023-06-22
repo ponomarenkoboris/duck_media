@@ -2,43 +2,63 @@
 	{
 		"id": 1,
 		"list": [
-			{"id": "Canvas Group", "name": "Canvas Group"},
-			{"id": "Citibank", "name": "Citibank"},
-			{"id": "Google", "name": "Google"},
-			{"id": "The Guardian", "name": "The Guardian"},
-			{"id": "Hugo Boss", "name": "Hugo Boss"},
-			{"id": "IAG Insurance", "name": "IAG Insurance"}
+			{"id": "ВТБ", "name": "ВТБ"},
+			{"id": "Yaarti", "name": "Yaarti"},
+			{"id": "Wrong Barber", "name": "Wrong Barber"},
+			{"id": "Klim", "name": "Klim"},
+			{"id": "Формула успеха", "name": "Формула успеха"},
+			{"id": "Млечный", "name": "Млечный"},
+			{"id": "Кубок МЦ", "name": "Кубок МЦ"},
+			{"id": "Детский мир", "name": "Детский мир"},
+			{"id": "Газпром", "name": "Газпром"},
+			{"id": "Мосэнерго", "name": "Мосэнерго"},
+			{"id": "Мукка", "name": "Мукка"}
 		]
 	},
 	{
 		"id": 2,
 		"list": [
-			{"id": "Canvas Group", "name": "Canvas Group"},
-			{"id": "GBH", "name": "GBH"},
-			{"id": "Grey", "name": "Grey"},
-			{"id": "Handsome Brands", "name": "Handsome Brands"},
-			{"id": "Honour Branding", "name": "Honour Branding"},
-			{"id": "IDEO", "name": "IDEO"}
+			{"id": "Глав-доставка", "name": "Глав-доставка"},
+			{"id": "ПФКИ", "name": "ПФКИ"},
+			{"id": "Интеллектуальное кабаре", "name": "Интеллектуальное кабаре"},
+			{"id": "Флореаль", "name": "Флореаль"},
+			{"id": "ИРИ", "name": "ИРИ"},
+			{"id": "Trilla", "name": "Trilla"},
+			{"id": "Remi Martin", "name": "Remi Martin"},
+			{"id": "Foxy", "name": "Foxy"},
+			{"id": "Zala Aero", "name": "Zala Aero"},
+			{"id": "Четвероногий Гурман", "name": "Четвероногий Гурман"}
 		]
 	},
 	{
 		"id": 3,
 		"list": [
-			{"id": "Karoshi", "name": "Karoshi"},
-			{"id": "MerchantCantos", "name": "MerchantCantos"},
-			{"id": "MultiAdaptor", "name": "MultiAdaptor"},
-			{"id": "Spring In Alaska", "name": "Spring In Alaska"},
-			{"id": "Spring Studios", "name": "Spring Studios"}
+			{"id": "ГУУ", "name": "ГУУ"},
+			{"id": "Ершов", "name": "Ершов"},
+			{"id": "Фк Спартак", "name": "Фк Спартак"},
+			{"id": "Яндекс", "name": "Яндекс"},
+			{"id": "Русский Стандарт", "name": "Русский Стандарт"},
+			{"id": "Rior Games (League of Legends)", "name": "Rior Games (League of Legends)"},
+			{"id": "Sennheizer Epos", "name": "Sennheizer Epos"},
+			{"id": "Авиапарк", "name": "Авиапарк"},
+			{"id": "Банк открытие", "name": "Банк открытие"},
+			{"id": "Хлебный дом", "name": "Хлебный дом"}
 		]
 	},
 	{
 		"id": 4,
 		"list": [
-			{"id": "Levis", "name": "Levis"},
-			{"id": "NZ Fire Service", "name": "NZ Fire Service"},
-			{"id": "Panasonic Australia", "name": "Panasonic Australia"},
-			{"id": "Puma", "name": "Puma"},
-			{"id": "Red Bull", "name": "Red Bull"}
+			{"id": "Kracks", "name": "Kracks"},
+			{"id": "Teekane", "name": "Teekane"},
+			{"id": "Технониколь", "name": "Технониколь"},
+			{"id": "Polaris", "name": "Polaris"},
+			{"id": "Faizer", "name": "Faizer"},
+			{"id": "Google", "name": "Google"},
+			{"id": "Эдвард Билл", "name": "Эдвард Билл"},
+			{"id": "Goody", "name": "Goody"},
+			{"id": "Sqwoz Bab", "name": "Sqwoz Bab"},
+			{"id": "Дети Rave", "name": "Дети Rave"},
+			{"id": "Gorky Park", "name": "Gorky Park"}
 		]
 	}
 ]
