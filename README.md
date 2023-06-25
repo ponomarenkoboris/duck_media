@@ -3,17 +3,31 @@
 Структура проекта:
 
 * public - исходные изображения 
+	- favicon - изобрадение для вкладки в браузере
+	- logo - логотип компании
+	- portfolio - изображения для портфолио, сортированные по категориям
 * src:
 	- components
-	- [data](#data)
-	- features
-	- pages
-	- styles 
+		- layout - структура документа
+			- header - компонент шапки приложения
+			- layout - компонент для создания общей струткры документа
+			- seo - компнент для создания SEO оптимизации
+		- screens - компоненты страниц приложения
+	- data - контент на страницах
+		- types - описание типов для данных
+		- [clients.json](#clients)
+		- [seo.json](#seo)
+		- [works.json](#works)
+	- features - уникальные компоненты
+		- contacts - фича старницы контактов
+		- portfolio - фича страницы портфолио
+	- pages - страницы приложения
+	- styles - глобальные стили
+		- globals.scss - глобальные стили приложения
 
-<a id="data">src/data</a>
-===
 
-src/data/clients.json 
+
+<a id="#clients">clients.json</a>
 ---
 \- массив клиентов, разделенный по столбцам списка на странице /clients
 
@@ -30,7 +44,7 @@ src/data/clients.json
 
 ---
 
-src/data/seo.json 
+<a id="#seo">seo.json</a>
 ---
 \- объект, содержащий в себе мета иформацию страницы
 
@@ -44,8 +58,7 @@ Key - uri страницы, value - объект типа MetaData
 
 ---
 
-
-src/data/works.json 
+<a id="#works">works.json</a>
 ---
 \- массив проектов 
 
