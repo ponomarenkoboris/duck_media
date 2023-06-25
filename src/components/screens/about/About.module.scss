@@ -27,6 +27,11 @@
 			.about__imageWrapper {
 				height: 310px;
 				width: 310px;
+
+				.about__image {
+					height: inherit;
+					width: inherit;
+				}
 			}
 		}
 	}
