@@ -11,7 +11,7 @@ export default function About() {
 					<div className={styles.about__imageWrapper}>
 						<Image
 							className={styles.about__image}
-							src={aboutContent.img}
+							src={aboutContent.src}
 							alt='О нас'
 							height={534}
 							width={534}
