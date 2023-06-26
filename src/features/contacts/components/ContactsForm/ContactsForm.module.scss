@@ -6,6 +6,9 @@
 	
 	.form__bottom {
 		color: var(--theme-text-color);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	
 		span {
 			font-size: 14px;
@@ -13,6 +16,8 @@
 		}
 	
 		.form__submit {
+			padding: 10px 15px;
+			border-radius: 8px;
 			border: none;
 			background-color: inherit;
 			text-transform: uppercase;

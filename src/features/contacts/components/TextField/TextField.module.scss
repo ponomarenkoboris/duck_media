@@ -5,7 +5,7 @@
 	.tip {
 		margin-left: 10px;
 		font-size: .7em !important;
-		color: #ff6767 !important;
+		color: var(--theme-error-color) !important;
 		user-select: none;
 	}
 

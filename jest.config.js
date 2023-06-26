@@ -11,7 +11,8 @@ module.exports = {
 		"^@features(.*)$": "<rootDir>/src/features/$1",
 		"^@components(.*)$": "<rootDir>/src/components/$1",
 		"^@styles(.*)$": "<rootDir>/src/styles/$1",
-		"^@data(.*)": "<rootDir/src/data/$1>"
+		"^@data(.*)": "<rootDir>/src/data/$1",
+		"^@services(.*)": "<rootDir>/src/services/$1"
 	},
 	transform: {
 		'^.+\\.tsx?$': ['ts-jest', {
