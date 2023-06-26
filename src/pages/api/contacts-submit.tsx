@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import sendMessage from "@services/telegram/sendMessage";
 
-export default async function contactsSubmitHandler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const data = JSON.parse(req.body);
 
     try {
