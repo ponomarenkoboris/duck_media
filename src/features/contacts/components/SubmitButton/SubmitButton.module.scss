@@ -1,0 +1,57 @@
+@mixin before-status {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    height: 15px;
+    width: 15px;
+}
+
+#error__status {
+    position: relative;
+    padding-left: 35px;
+    background-color: var(--theme-error-color);
+    pointer-events: none;
+}
+
+#error__status:before {
+    content: url('../../../../../public/ui/cross.svg');
+    color: var(--theme-text-color);
+    @include before-status;
+}
+
+#success__status {
+    position: relative;
+    padding-left: 35px;
+    background-color: var(--theme-success-color);
+    pointer-events: none;
+}
+
+#success__status:before {
+    content: url('../../../../../public/ui/check-mark.svg');
+    @include before-status;
+}
+
+#pending__status {
+    padding-left: 35px;
+    pointer-events: none;
+    position: relative;
+}
+
+#pending__status:before {
+    content: '';
+    @include before-status;
+    border: 2px solid var(--theme-text-color);
+    border-bottom: 2px solid transparent;
+    border-radius: 50%;
+    animation: 1000ms linear infinite spinner;
+}
+
+@keyframes spinner {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
