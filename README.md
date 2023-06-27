@@ -1,5 +1,8 @@
 # Duck Media
 
+### https://dynamic-lokum-e8d2a1.netlify.app/
+
+
 Структура проекта:
 
 * public - исходные изображения 

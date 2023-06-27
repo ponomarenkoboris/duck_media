@@ -8,6 +8,7 @@
 }
 
 #error__status {
+    opacity: 1;
     position: relative;
     padding-left: 35px;
     background-color: var(--theme-error-color);
@@ -21,6 +22,7 @@
 }
 
 #success__status {
+    opacity: 1;
     position: relative;
     padding-left: 35px;
     background-color: var(--theme-success-color);
@@ -33,6 +35,7 @@
 }
 
 #pending__status {
+    opacity: 1;
     padding-left: 35px;
     pointer-events: none;
     position: relative;
