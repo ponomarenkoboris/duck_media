@@ -1,11 +1,11 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import sendMessage from "@services/telegram/sendMessage";
+import sendTelegramMessage from "@services/telegram/sendTelegramMessage";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const data = JSON.parse(req.body);
 
     try {
-        const { status, message } = await Promise.any([sendMessage(data)])
+        const { status, message } = await sendTelegramMessage(data)
 
         if (!status) {
             res.status(500)

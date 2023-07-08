@@ -3,7 +3,7 @@ import { getMessageDate, configureTelegramUrl } from '../utils';
 
 
 
-export default async function sendMessage([name, email, about]: Message): Promise<MessageSendResult> {
+export default async function sendTelegramMessage([name, email, about]: Message): Promise<MessageSendResult> {
     const result: MessageSendResult = { status: true, message: '' }
     try {
         const message = `${email} - хочет сотрудничать! %0A%0AИмя: ${name} %0AEmail: ${email} %0AИдея: ${about} %0A%0A${getMessageDate()}`;
