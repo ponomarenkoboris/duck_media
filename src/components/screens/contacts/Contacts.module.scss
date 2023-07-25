@@ -1,5 +1,4 @@
 .contacts {
-	height: 100%;
 	padding: 100px 20px 0;
 	display: flex;
 	justify-content: space-between;
@@ -7,19 +6,23 @@
 	width: 1170px;
 	
 	&__info {
-		width: 41%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: min-content;
 
 		& > * {
 			margin-bottom: 10px;
 		}
 
 		.info__title {
+			text-transform: uppercase;
 			font-size: 3.5rem;
 			font-weight: 300;
-			line-height: 1.1;
 		}
 
 		.info__description {
+			width: 463px;
 			font-family: "HK Grotesk", "Helvetica Neue", Helvetica, sans-serif;
 			font-size: 1.45em;
 			line-height: 1.6;
@@ -32,6 +35,12 @@
 @media (max-width: 1216px) {
 	.contacts {
 		width: 992px;
+
+		&__info {
+			.info__title {
+				font-size: 2.5rem;
+			}
+		}
 	} 
 }
 @media (max-width: 992px) {
@@ -43,6 +52,10 @@
 		&__info {
 			width: 100%;
 			margin-bottom: 30px;
+
+			.info__description {
+				width: auto;
+			}
 		}
 	}
 }

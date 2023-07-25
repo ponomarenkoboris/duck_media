@@ -32,7 +32,7 @@ export const ContactsForm = () => {
 			aboutTip: validateText(aboutVal)
 		}
 
-		if (newTips.nameTip !== null || newTips.emailTip !== null || newTips.aboutTip !== null) {
+		if (newTips.nameTip || newTips.emailTip || newTips.aboutTip) {
 			setFieldTips(newTips)
 			return 
 		}

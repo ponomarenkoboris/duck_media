@@ -7,18 +7,13 @@ export default function Contacts() {
 		<Layout>
 			<div className={styles.contacts} id='contacts'>
 				<div className={styles.contacts__info}>
-					<h1 className={styles.info__title}>Contact</h1>
+					<h1 className={styles.info__title}>Работаем круглосуточно</h1>
 					<p className={styles.info__description}>
-						Ordinary science uses terms and laws of that very science to continue the research, 
-						uniting with the others in very rare cases. 
-						Philosophy gets into the sense of every science trying to achieve results.
+						Наше медиагентство сможет помочь вам реализовать ваши идеи! 
+						Заполните форму и мы свяжемся с вами в ближайшее время. 
 					</p>
 					<p className={styles.info__description}>
-						I also can not call philosophy a supra-science, 
-						for it also uses hypothesis and arguments to state the opinion. 
-						But there is the obvious thing: there are now laws in philosophy and 
-						never will be, for the science changes with the age, the needs, 
-						beliefs and requirements of the citizens.
+					Наша команда экспертов готова помочь вам создать качественный контент и донести его до вашей аудитории. 
 					</p>
 				</div>
 				<ContactsForm />

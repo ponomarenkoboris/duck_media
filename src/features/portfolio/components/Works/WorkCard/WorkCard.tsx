@@ -10,8 +10,13 @@ const Card = ({ src, id }: Omit<Work, 'category' | 'name'>) => {
 				className={styles.workCard__image}
 				src={src}
 				alt='Work example'
-				width={407}
+				width={359}
 				height={359}
+				priority
+				style={{ 
+					width: 'auto', 
+					height: 'auto' 
+				}}
 			/>
 		</div>
 	)
