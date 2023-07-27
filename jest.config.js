@@ -9,7 +9,7 @@ module.exports = {
 		"^.+\\.s?css$": "identity-obj-proxy",
 		"^@public(.*)$": "<rootDir>/public/$1",
 		"^@features(.*)$": "<rootDir>/src/features/$1",
-		"^@components(.*)$": "<rootDir>/src/components/$1",
+		"^@layout(.*)$": "<rootDir>/src/layout/$1",
 		"^@styles(.*)$": "<rootDir>/src/styles/$1",
 		"^@data(.*)": "<rootDir>/src/data/$1",
 		"^@services(.*)": "<rootDir>/src/services/$1"

@@ -1,5 +1,14 @@
-import Portfolio from "@components/screens/portfolio/Portfolio"
+import Layout from "@layout/index";
+import PortfolioWorks from "@features/portfolio";
+
+import styles from "@styles/views/Portfolio.module.scss";
 
 export default function PortfolioPage() {
-	return <Portfolio />
+	return (
+		<Layout>
+			<div className={styles.portfolio}>
+				<PortfolioWorks />
+			</div>
+		</Layout>
+	)
 }

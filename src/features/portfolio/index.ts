@@ -1,5 +1,3 @@
 import { PortfolioWorks } from './components/PortfolioWorks';
 
-export {
-	PortfolioWorks
-}
+export default PortfolioWorks
