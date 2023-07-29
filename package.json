@@ -8,7 +8,6 @@
 		"start": "next start",
 		"lint": "next lint",
 		"test": "jest --watch",
-		"fix": "next lint --fix",
 		"coverage": "jest --coverage"
 	},
 	"dependencies": {
