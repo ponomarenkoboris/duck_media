@@ -1,5 +1,6 @@
-import Layout from "@layout/index";
 import Image from "next/image";
+import Layout from "@layout/index";
+
 import aboutContent from "@data/about.json";
 
 import styles from "@styles/views/About.module.scss";
@@ -22,5 +23,5 @@ export default function AboutPage() {
 				</div>
 			</div>
 		</Layout>
-	)
+	);
 }

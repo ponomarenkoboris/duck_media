@@ -1,7 +1,7 @@
-import { routes } from './constants/routes'
-import { navBlurEvent } from './helpers/blurEvent'
+import { navBlurEvent } from "./helpers/blurEvent";
+import { routes } from "./constants/routes";
 
 export {
 	routes,
 	navBlurEvent
-}
+};

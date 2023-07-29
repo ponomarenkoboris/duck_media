@@ -1,5 +1,5 @@
-import Layout from "@layout/index";
 import ContactsForm from "@features/contacts";
+import Layout from "@layout/index";
 
 import styles from "@styles/views/Contacts.module.scss";
 
@@ -20,5 +20,5 @@ export default function ContactsPage() {
 				<ContactsForm />
 			</div>
 		</Layout>
-	)
+	);
 }

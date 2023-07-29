@@ -4,4 +4,4 @@ import { getMessageDate } from "./getMessageDate";
 export {
     configureTelegramUrl,
     getMessageDate
-}
+};
