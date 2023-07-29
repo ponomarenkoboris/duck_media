@@ -1,9 +1,9 @@
-import { memo } from 'react';
-import Image from 'next/image'
-import type { Work } from '@data/types/works.type'
-import styles from './WorkCard.module.scss';
+import Image from "next/image";
+import type { Work } from "@data/types/works.type";
+import { memo } from "react";
+import styles from "./WorkCard.module.scss";
 
-const Card = ({ src, id }: Omit<Work, 'category' | 'name'>) => {
+const Card = ({ src, id }: Omit<Work, "category" | "name">) => {
 	return (
 		<div className={styles.workCard} data-workid={id}>
 			<Image 
@@ -14,12 +14,12 @@ const Card = ({ src, id }: Omit<Work, 'category' | 'name'>) => {
 				height={359}
 				priority
 				style={{ 
-					width: 'auto', 
-					height: 'auto' 
+					width: "auto", 
+					height: "auto" 
 				}}
 			/>
 		</div>
-	)
-}
+	);
+};
 
-export const WorkCard = memo(Card)
+export const WorkCard = memo(Card);

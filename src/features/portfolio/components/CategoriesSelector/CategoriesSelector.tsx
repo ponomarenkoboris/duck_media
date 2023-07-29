@@ -1,11 +1,11 @@
-import { useContext, useState, MouseEvent } from 'react';
-import { PortfolioContext } from '../../context/PortfolioContext';
-import { categories } from '../../utils';
-import styles from './CategoriesSelector.module.scss';
+import { MouseEvent, useContext, useState } from "react";
+import { PortfolioContext } from "../../context/PortfolioContext";
+import { categories } from "../../utils";
+import styles from "./CategoriesSelector.module.scss";
 
 export const CategoriesSelector = () => {
 	const { activeCategory, selectCategory } = useContext(PortfolioContext);
-	const [ isShownSelectors, setIsShownSelectors ] = useState<boolean>(false);
+	const [isShownSelectors, setIsShownSelectors] = useState<boolean>(false);
 
 	const onToggleCategories = () => setIsShownSelectors(!isShownSelectors);
 
@@ -13,11 +13,11 @@ export const CategoriesSelector = () => {
 		const categoryEl = (event.target as HTMLElement).closest(`.${styles.categoriesList__item}`) as HTMLElement | null;
 
 		if (categoryEl?.dataset && categoryEl.dataset?.role) {
-			selectCategory(categoryEl.dataset.role)
+			selectCategory(categoryEl.dataset.role);
 		} 
 
-		onToggleCategories()
-	}
+		onToggleCategories();
+	};
 
 
 	return (
@@ -35,5 +35,5 @@ export const CategoriesSelector = () => {
 				</div>
 			)}
 		</div>
-	)
-}
+	);
+};

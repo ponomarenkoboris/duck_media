@@ -10,7 +10,7 @@ export default function HomePage() {
 				<div className={styles.homepage__container}>
 					<p className={styles.homepage__intro}>Мы создаем:</p>
 					<div className={styles.homepage__benefits}>
-						{benefits.map(({benefit, id}) => id === 1
+						{benefits.map(({ benefit, id }) => id === 1
 							? (
 								<h1 key={id} className={styles.benefits__item}>
 									{benefit}
@@ -25,5 +25,5 @@ export default function HomePage() {
 				</div>
 			</div>
 		</Layout>
-	)
+	);
 }

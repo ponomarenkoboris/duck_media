@@ -1,8 +1,9 @@
-import { PropsWithChildren } from 'react';
-import Head from 'next/head';
-import type { MetaData } from '@data/types/seo.type';
+import Head from "next/head";
+import { PropsWithChildren } from "react";
 
-const getTitle = (title: string) => `Duck Media | ${title}`
+import type { MetaData } from "@data/types/seo.type";
+
+const getTitle = (title: string) => `Duck Media | ${title}`;
 
 export const Meta = ({ children, title, description }: PropsWithChildren<MetaData>) => {
 	return (
@@ -16,5 +17,5 @@ export const Meta = ({ children, title, description }: PropsWithChildren<MetaDat
 			</Head>
 			{children}
 		</>
-	)
-}
+	);
+};

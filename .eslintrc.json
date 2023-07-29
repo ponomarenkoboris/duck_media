@@ -1,3 +1,41 @@
 {
-  	"extends": "next/core-web-vitals"
+	"parser": "@typescript-eslint/parser",
+  	"extends": [
+		"next",
+		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"settings": {
+		"import/resolver": {
+			"alias": [
+				["@data", "./src/data"],
+				["@features", "./src/features"],
+				["@layout", "./src/layout"],
+				["@services", "./src/services"],
+				["@styles", "./src/styles"]
+			]
+		}
+	},
+	"rules": {
+		"no-console": 2,
+		"semi": "error",
+		"object-curly-spacing": ["error", "always"],
+		"array-bracket-spacing": ["error", "never"], 
+		"computed-property-spacing": ["error", "never"],
+		"sort-imports": ["error", {
+			"ignoreCase": false,
+			"ignoreDeclarationSort": false,
+			"ignoreMemberSort": false,
+			"memberSyntaxSortOrder": ["all", "multiple", "single", "none"],
+			"allowSeparatedGroups": true
+		}],
+		"@typescript-eslint/quotes": [
+			"error", 
+			"double", 
+			{
+				"allowTemplateLiterals": true
+			}
+		]
+	}
 }

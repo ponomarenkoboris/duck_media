@@ -1,3 +1,3 @@
-import { PortfolioWorks } from './components/PortfolioWorks';
+import { PortfolioWorks } from "./components/PortfolioWorks";
 
-export default PortfolioWorks
+export default PortfolioWorks;
